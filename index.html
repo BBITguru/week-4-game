@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html lang="en-us">
 <head>
-  <title>Crystal Collector</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-
-
+  <title>Walter White Crystal Selector</title>
+  <link rel="stylesheet" type = "text/css" href="assets/css/style.css">
 </head>
-
-
 <body>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- Script -->
-  <script type="text/javascript" src="game.js"></script>
+  <div class = "wwcc-title">
+    <h1>Walter White Crystal Selector</h1>
+  </div>
+
+  <div id = "instructions">
+      <h2>Instructions</h2>
+      <p>Jesse will give you a random number at the start of the game</p>
+      <p>By clicking a crystal you will add points to your total score.</p>
+      <p>You win by matching your total score to Jesse's number, you lose if your score goes above the random number.</p>
+      <p>The value of each crystal is hidden until you click</p>
+      <p>Every time when the game starts, the game will change the values of each crystal</p>
+  </div>
+
+<div class = "container">
+    <div>
+      <h2> Yo! Mr. White!</h2>
+      <h2>"I need you to select no more than <span id = "ranNum">_</span> Crystals, Betch!"</h2>
+    </div>
+
+    <div id ="crystals">
+      <ul>
+        <li id ="c0"><img src = "assets/images/blue.png"></li>
+        <li id ="c1"><img src ="assets/images/red.png"></li>
+        <li id ="c2"><img src ="assets/images/green.png"></li>
+        <li id ="c3"><img src ="assets/images/yellow.png"></li>
+      </ul>
+    </div>
+ 
+    <div id="userScore">
+      <h2 id = "userTotal">Jesse Pinkman says: "You've got <span id="score">0</span> of <span id = "ofNum">_</span> Crystals, Betch!"</h2>
+    </div>
+
+    <div class = "scoreboard"> 
+      <div id = "wins">Wins:<span id = "wins"></span></div>
+      <div id = "losses">Losses:<span id = "losses"></span></div>
+    </div>
+</div>
+
+
+<!-- Script -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
+</html>
